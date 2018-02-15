@@ -6,6 +6,7 @@ fullwidth: pink.jpg
 images: ["pink.jpg"]
 ---
 💻Building [cool stuff](https://chatops.heroku.com) at [Heroku](https://heroku.com)  
+
 📸[Wandering in the 🌲](https://www.vadrouilles.co)
 
 ![](pink.jpg)
