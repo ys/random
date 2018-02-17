@@ -43,6 +43,18 @@
 .photoset figure {
   margin: 0;
 }
+<<<<<<< current
+=======
+.links  {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.links div {
+  margin-right: 10px;
+}
+>>>>>>> before discard
 
 .emoji {
   font-family: arial;
