@@ -91,7 +91,9 @@ a {
   border-bottom: 1px dotted;
   text-decoration: none;
 }
-
+footer {
+  height: 50px;
+}
 header {
   padding-top: 30px;
 }
