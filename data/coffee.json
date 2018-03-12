@@ -1,13 +1,8 @@
 {
   "coffees": [
     {
-      "from": "Refuge coffees",
-      "origin": "Ethiopia Natural Guji",
-      "for": "filter"
-    },
-    {
-      "from": "Linea",
-      "origin": "Ethiopia Hambela Reserve",
+      "from": "White label coffees",
+      "origin": "Peru",
       "for": "filter"
     }
   ]
