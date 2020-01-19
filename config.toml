@@ -1,5 +1,18 @@
-baseURL = "https://yannick.io/"
+baseURL = "https://yannickschutz.com/"
 languageCode = "en-us"
-title = "🌲 Yannick Schutz"
-theme = "less"
-googleAnalytics = "UA-33356575-1"
+title = "Yannick Schutz"
+theme = "term"
+enableRobotsTXT = true
+canonifyURLs = false
+disableKinds = ["section", "taxonomy", "taxonomyTerm"]
+
+[params]
+  textFont = 'Source Code Pro'
+  footer = 'Please consider the environment before printing this website'
+
+[params.social]
+  email = "hello@yannickschutz.com"
+
+[params.fathom]
+  host = "logs.vadrouilles.co"
+  siteID = "IMJQP"
