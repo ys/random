@@ -1,0 +1,3 @@
+[submodule "themes/term"]
+	path = themes/term
+	url = https://github.com/ys/term.git
