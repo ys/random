@@ -7,7 +7,6 @@ canonifyURLs = false
 disableKinds = ["section", "taxonomy", "taxonomyTerm"]
 
 [params]
-  textFont = 'Source Code Pro'
   footer = '🌲 Please consider the environment before printing this website'
 
 [params.social]
