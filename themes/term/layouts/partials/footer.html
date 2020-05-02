@@ -2,6 +2,7 @@
   <span class="mr-2">
     {{ $.Site.Params.footer }}
   </span>
+  {{ partial "main_menu.html" . }}
   <a class="link theme-switcher mr-2">Switch theme</a>
   {{ with .Site.Params.social.instagram }}
   <a class="mr-2" href="https://instagram.com/{{ . }}">📷 Instagram</a>

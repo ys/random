@@ -4,7 +4,7 @@ title = "Yannick Schutz"
 theme = "term"
 enableRobotsTXT = true
 canonifyURLs = false
-disableKinds = ["section", "taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [params]
   footer = '🌲 Please consider the environment before printing this website'
@@ -15,3 +15,6 @@ disableKinds = ["section", "taxonomy", "taxonomyTerm"]
 [params.fathom]
   host = "logs.vadrouilles.co"
   siteID = "IMJQP"
+
+[permalinks]
+  posts = "/:slug"

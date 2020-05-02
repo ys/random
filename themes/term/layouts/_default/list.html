@@ -1,8 +1,16 @@
 {{ define "main" }}
+  <h2 class="font-semibold my-20">{{ .Title }}</h2>
   <div>
-    {{ $paginator := (.Paginate (.Site.RegularPages) 10) }}
-    {{ range $paginator.Pages }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ range (.Paginator 10).Pages }}
+    <article class="mb-4">
+      <header class="mb-2" >
+        <h2 class="font-bold uppercase">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </h2>
+        <h3 class="text-sm">🗓 {{ .Date.Format "02 January 2006" }}</h3>
+      </header>
+      <p>{{ .Summary }}</p>
+    </article>
     {{ end }}
     {{ template "_internal/pagination.html" . }}
   </div>
