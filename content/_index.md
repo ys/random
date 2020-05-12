@@ -5,12 +5,12 @@ draft: false
 fullwidth: pink.jpg
 images: ["pink.jpg"]
 ---
-I am a **product and customer driven developer**. Currently building Private spaces at Heroku, a salesforce company.
+I am a software developper driven by **product and customer**. I love solving **real people issues**.
 
-I’ve been building the Developer Experience, internal tooling, continuous delivery, chatops and compliance tooling for heroku. Previously, I was driving back-end development for startups or building products for clients.
+Currently building Private spaces at [Heroku](https://heroku.com), a salesforce company.
 
-I truly believe that **software serves the people** and not the opposite.
+I built pieces of the Developer Experience, internal tooling, continuous delivery, chatops and compliance tooling for Heroku. Previously, I was driving back-end development for startups or building products for clients.
 
-**Make it simple**, not clever.
+**Make it simple**, we are all dumb most of the time.
 
 Want to talk about simplicity, product or remote culture? ping me. I also enjoy a good cup of coffee.
