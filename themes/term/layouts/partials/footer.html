@@ -1,9 +1,4 @@
-<footer class="text-center w-full p-10 text-gray-600 dark:text-gray-400 font-sans font-light text-xs">
-  <span class="mr-2">
-    {{ $.Site.Params.footer }}
-  </span>
-  {{ partial "main_menu.html" . }}
-  <a class="link theme-switcher mr-2">Switch theme</a>
+<footer class="text-center w-full p-10 text-gray-800 dark:text-gray-200 font-sans font-light text-xs">
   {{ with .Site.Params.social.instagram }}
   <a class="mr-2" href="https://instagram.com/{{ . }}">📷 Instagram</a>
   {{ end }} {{ with .Site.Params.social.twitter }}
@@ -13,5 +8,6 @@
   {{ end }} {{ with .Site.Params.social.vsco }}
   <a class="mr-2" href="https://vsco.com/{{ . }}">📷 VSCO</a>
   {{ end }}
-  <a href="mailto:{{ $.Site.Params.social.email }}">✉️ {{ $.Site.Params.social.domain }}</a>
+  <a href="mailto:{{ $.Site.Params.social.email }}">✉️ Email Me</a> <span class="mx-3">•</span>
+  <a class="theme-switcher cursor-pointer">Switch theme</a>
 </footer>
