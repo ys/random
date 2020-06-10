@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head" .}}
-  <body class="flex flex-col justify-between h-screen leading-relaxed text-base text-darker dark:bg-darker dark:text-gray-100">
-    <div class="container my-10 w-screen max-w-3xl mx-4 md:mx-auto">
+  <body class="font-mono flex flex-col justify-between h-screen leading-relaxed text-base text-darker dark:bg-darker dark:text-gray-100">
+    <div class="container my-10 w-screen max-w-xl mx-4 md:mx-auto">
       {{ block "main" . }} {{ end }}
     </div>
 

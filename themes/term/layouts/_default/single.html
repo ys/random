@@ -1,5 +1,5 @@
 {{ define "main" }}
-<h2 class="font-semibold my-20">{{ .Title }}</h2>
+<h1 class="font-semibold my-20">{{ with .Params.emoji }}{{ . }} {{ end }}{{ .Title }}</h1>
 <div class="content">
   {{ .Content }}
 </div>

@@ -3,7 +3,7 @@
   <ul class="flex flex-wrap flex-row justify-left">
     {{ range $index, $element  := .Site.Menus.main }}
       <li class="pr-2 ">
-        <a class=" {{if or ($currentPage.IsMenuCurrent "main" $element) ($currentPage.HasMenuCurrent "main" $element) }} active{{end}}" href="{{ $element.URL }}" title="{{ $element.Title }}">{{ $element.Name }}</a>
+        <a class=" {{if or ($currentPage.IsMenuCurrent "main" $element) ($currentPage.HasMenuCurrent "main" $element) }} italic font-semibold active{{end}}" href="{{ $element.URL }}" title="{{ $element.Title }}">{{ $element.Name }}</a><span class="mx-3">•</span>
       </li>
     {{ end }}
   </ul>

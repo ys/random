@@ -18,16 +18,6 @@ module.exports = {
       colors: {
         dark: "#2d2f34",
         darker: "#1F2023"
-      },
-      fontSize: {
-        xs: "1rem",
-        sm: "1.125rem",
-        base: "1.25rem",
-        lg: "1.5rem",
-        xl: "1.875rem",
-        "2xl": "2.25rem",
-        "3xl": "3rem",
-        "4xl": "4rem"
       }
     }
   }

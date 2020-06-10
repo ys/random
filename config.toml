@@ -1,6 +1,6 @@
 baseURL = "https://yannickschutz.com/"
 languageCode = "en-us"
-title = "🤷🏼‍♂️ Yannick Schutz"
+title = "Yannick Schutz"
 theme = "term"
 enableRobotsTXT = true
 canonifyURLs = false
@@ -17,4 +17,4 @@ disableKinds = ["taxonomy", "taxonomyTerm"]
   siteID = "IMJQP"
 
 [permalinks]
-  posts = "/:slug"
+  costs = "/:slug"

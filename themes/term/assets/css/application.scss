@@ -106,7 +106,7 @@ hr {
   h2 {
    @apply my-6 pt-2 text-gray-600 font-semibold block
   }
-  ul {
+  ul, ol {
    @apply list-disc list-inside my-8
   }
   p {

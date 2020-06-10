@@ -1,7 +1,10 @@
 ---
-title: "👨🏼‍💻 About me"
+title: "About me"
+emoji: "👨🏼‍💻"
 slug: "about"
-menu: "main"
+menu: 
+  main: 
+    weight: 2
 ---
 
 Hey y'all, I am Yannick. I live at the end of the world in Finistère, France.

@@ -4,6 +4,10 @@ date: 2017-10-26T22:57:50+02:00
 draft: false
 fullwidth: pink.jpg
 images: ["pink.jpg"]
+menu: 
+  main:
+   name: Home
+   weight: 1
 ---
 I am a software developper driven by **product and customer**. I love solving **real people issues**.
 
