@@ -2,8 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "head" .}}
   <body class="font-mono flex flex-col justify-between h-screen leading-relaxed text-base text-darker dark:bg-darker dark:text-gray-100">
-    <div class="container my-10 w-screen max-w-xl mx-4 md:mx-auto">
+    <div class="container w-screen text-lg max-w-xl md:mx-auto">
+      <div class="mx-4 md:mx-0">
       {{ block "main" . }} {{ end }}
+      </div>
     </div>
 
     {{ partial "footer" . }} {{ partial "fathom" . }}
