@@ -98,22 +98,22 @@ hr {
   @apply block mt-6 mb-10 border-b border-gray-200 w-2/4 mx-auto;
 }
 
-.post, .content {
+.content {
   @apply mb-10;
   h1 {
-   @apply my-6 pt-2 font-semibold block
+   @apply my-6 pt-2 font-semibold block;
   }
   h2 {
-   @apply my-6 pt-2 text-gray-600 font-semibold block
+   @apply my-6 pt-2 text-gray-600 font-semibold block;
   }
   ul, ol {
-   @apply list-disc list-inside my-8
+   @apply list-disc list-inside my-8;
   }
   p {
-    @apply my-4
+    @apply my-4;
   }
   figcaption {
-    @apply text-xs font-sans text-gray-500 text-center
+    @apply text-xs font-sans text-gray-500 text-center;
   }
   blockquote {
     @screen md {
