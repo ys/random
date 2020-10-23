@@ -7,7 +7,8 @@ module.exports = {
         themeDir + "../../public/**/*.html"
       ],
       whitelistPatternsChildren: [
-       /mode-dark/
+       /mode-dark/,
+       /content/
       ]
     }),
     require("tailwindcss")(themeDir + "tailwind.config.js"),
