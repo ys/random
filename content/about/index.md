@@ -4,7 +4,7 @@ emoji: "👨🏼‍💻"
 slug: "about"
 menu:
   main:
-    weight: 2
+    weight: 20
 ---
 
 Hey y'all, I am Yannick. I live at the end of the world in Finistère, France.
