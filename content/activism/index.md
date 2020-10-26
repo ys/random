@@ -2,6 +2,7 @@
 title: "Microactivism"
 emoji: "✊"
 slug: "microactivism"
+date: 2020-10-26T10:00:00+02:00
 menu:
   main:
     weight: 2

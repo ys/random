@@ -1,6 +1,9 @@
-Here you will find links I find interesting, some notes and random thoughts
+---
+date: 2020-10-01T10:00:00+02:00
+emoji: "💻"
+---
 
-## 💻🔮
+## 🔮
 
 
 - [Choose boring tech by McKinley](http://mcfunley.com/choose-boring-technology)
