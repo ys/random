@@ -6,7 +6,7 @@
     <header class="mb-2">
       <h2 class="font-semibold">
         {{ with .Params.emoji }}{{ . }}{{ else }}→{{ end }} <a href="{{ .RelPermalink }}"
-          class="text-darker dark:text-gray-100 underline capitalize">{{ trim .Dir "/" }}</a>
+          class="text-darker dark:text-gray-100 underline capitalize">{{ trim .File.Dir "/" }}</a>
       </h2>
       {{ with .Date }}
       <h3 class="pl-8 text-gray-600"> {{ dateFormat "02 January 2006" . }}</h3>

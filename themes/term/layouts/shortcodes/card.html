@@ -1,0 +1,14 @@
+{{ $url := .Get 0 }}
+{{ $cardurl := printf "%s/api/card?url=%s" .Site.BaseUrl $url }}
+{{ $data := getJSON $cardurl }}
+<div class=" max-w-xl my-8 bg-white shadow-lg rounded-sm flex flex-row">
+    <div class=" w-1/4 overflow-hidden">
+      <img src="{{$data.image.url}}" alt="mountains" class="min-h-full min-w-full box-content">
+    </div>
+    <div class="w-3/4">
+      <div class="ml-4 text-gray-800 mt-2 tracking-normal"><a href="{{$url}}">{{$data.title}}</a></div>
+      <p class="ml-4 text-sm text-gray-700 mr-1">
+      {{$data.description}}
+      </p>
+  </div>
+</div>
