@@ -1,5 +1,5 @@
 {{ $url := .Get 0 }}
-{{ $cardurl := printf "%s/api/card?url=%s" .Site.BaseUrl $url }}
+{{ $cardurl := printf "%sapi/card?url=%s" $.Page.Site.BaseURL $url }}
 {{ $data := getJSON $cardurl }}
 <div class=" max-w-xl my-8 bg-white shadow-lg rounded-sm flex flex-row">
     <div class=" w-1/4 overflow-hidden">
