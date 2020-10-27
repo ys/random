@@ -61,36 +61,22 @@
       @apply bg-dark;
     }
     blockquote {
-      a {
-        text-shadow: -1px -1px 0 theme('colors.dark'), 1px -1px 0 theme('colors.dark'), -1px 1px 0 theme('colors.dark'), 1px 1px 0 theme('colors.dark');
-        background-image: linear-gradient(to top, transparent, transparent 2px, theme('colors.blue.200') 2px, theme('colors.blue.200') 2.5px, transparent 2.5px);
-      }
     }
   }
-  .link, .post a, .content a {
-    @apply text-blue-500 no-underline relative;
-    text-shadow: -1px -1px 0 theme('colors.gray.900'), 1px -1px 0 theme('colors.gray.900'), -1px 1px 0 theme('colors.gray.900'), 1px 1px 0 theme('colors.gray.900');
-    background-image: linear-gradient(to top, transparent, transparent 2px, theme('colors.blue.200') 2px, theme('colors.blue.200') 2.5px, transparent 2.5px);
+  .link, .post p a, .content p a {
+    @apply text-blue-500 relative;
     transition: color 0.5s, background-image 0.5s linear;
     &:hover {
-      @apply text-blue-600 no-underline relative;
-      text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
-      background-image: linear-gradient(to top, transparent, transparent 2px , theme('colors.blue.300') 2px, theme('colors.blue.300') 2.5px, transparent 2.5px);
+      @apply text-blue-600 underline relative;
     }
   }
 }
 
-.link, .post a, .content a {
-  @apply text-blue-500 no-underline relative;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px
-  1px 0 white;
-  background-image: linear-gradient(to top, transparent, transparent 2px, theme('colors.blue.500') 2px, theme('colors.blue.500') 2.5px, transparent 2.5px);
+.link, .post p a, .content p a {
+  @apply text-blue-500 underline relative;
   transition: color 0.5s, background-image 0.5s linear;
   &:hover {
-    @apply text-blue-600 no-underline relative;
-    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-    background-image: linear-gradient(to top, transparent, transparent 2px
-    , theme('colors.blue.600') 2px, theme('colors.blue.600') 2.5px, transparent 2.5px);
+    @apply text-blue-600 underline relative;
   }
 }
 
@@ -120,10 +106,6 @@ hr {
       @apply -mx-24;
     }
     @apply font-sans leading-snug text-blue-500 text-center italic text-2xl;
-    a {
-      text-shadow: -1px -1px 0 theme('colors.gray.200'), 1px -1px 0 theme('colors.gray.200'), -1px 1px 0 theme('colors.gray.200'), 1px 1px 0 theme('colors.gray.200');
-      background-image: linear-gradient(to top, transparent, transparent 2px, theme('colors.blue.200') 2px, theme('colors.blue.200') 2.5px, transparent 2.5px);
-    }
   }
 }
 
