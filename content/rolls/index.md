@@ -3,6 +3,15 @@
 This project is a set of utilities helping me getting organized with scans.
 
 Part of it might look like a rebuilt of a catalog. Goal is to not have to rely on lightroom all the time. 
+## CLI commands
+
+```
+analog exif:push - Push Exif from frontmatter
+analog exif:pull - Pull Exif to Frontmatter
+analog offline:build - Generate contact sheet and symlinks for cameras and films
+analog contactsheets:refresh - Regenerate all contact sheets
+analog static:build - Build a set of static html files and contact sheets for the web
+```
 
 ## Folders Structures
 
@@ -35,7 +44,6 @@ subjects:
 Roll story
 ```
 
-
 - Frontmatter format is YAML.
 - Mandatory keys: 
 	- camera
@@ -49,8 +57,8 @@ Roll story
 Folder structure is built based on the information we have in the files here. 
 Camera and Film might become slugs from 2 files
 
-- cameras.yaml
-- films.yaml
+- Scans/cameras.yaml
+- Scans/films.yaml
 
 those would be lists of cameras slugs and information
 
