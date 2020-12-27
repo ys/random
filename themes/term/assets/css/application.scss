@@ -62,7 +62,7 @@
     }
     blockquote {
     }
-    code {
+    pre {
      @apply bg-gray-500;
     }
   }
@@ -110,8 +110,11 @@ hr {
     }
     @apply font-sans leading-snug text-blue-500 text-center italic text-2xl;
   }
+  pre {
+    @apply bg-gray-300;
+  }
   code {
-    @apply m-2 bg-gray-300 break-words;
+    @apply m-2 break-words;
   }
 }
 
