@@ -62,6 +62,9 @@
     }
     blockquote {
     }
+    code {
+     @apply bg-gray-500;
+    }
   }
   .link, .post p a, .content p a {
     @apply text-blue-500 relative;
@@ -106,6 +109,9 @@ hr {
       @apply -mx-24;
     }
     @apply font-sans leading-snug text-blue-500 text-center italic text-2xl;
+  }
+  code {
+    @apply m-2 bg-gray-300;
   }
 }
 
