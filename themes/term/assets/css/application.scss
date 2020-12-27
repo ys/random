@@ -111,7 +111,7 @@ hr {
     @apply font-sans leading-snug text-blue-500 text-center italic text-2xl;
   }
   pre {
-    @apply bg-gray-300;
+    @apply p-4 bg-gray-300;
   }
   code {
     @apply m-2 break-words;
