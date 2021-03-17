@@ -75,7 +75,7 @@
   }
 }
 
-.link, .post p a, .content p a {
+.link, .post p a, .content p a, .content li a, .post li a {
   @apply text-blue-500 underline relative;
   transition: color 0.5s, background-image 0.5s linear;
   &:hover {

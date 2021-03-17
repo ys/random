@@ -2,18 +2,14 @@
 {{ $cardurl := printf "%sapi/card?url=%s" $.Page.Site.Params.apiURL $url }}
 {{ $data := getJSON $cardurl }}
 {{if $data}}
-<div class=" max-w-xl my-8 bg-white border border-gray-300  rounded-sm flex flex-row">
-  <div class="w-3/4">
-    <div class="ml-4 text-sm text-gray-800 mt-2 tracking-normal"><a href="{{$url}}">{{$data.title}}</a></div>
-    <p class="ml-4 text-xs text-gray-700 mr-1">
-      {{$data.description | truncate 80}}
-    </p>
-    <span class="ml-4 block pb-4 text-xs text-gray-500"><a class="text-gray-500 no-underline"
-        href="{{$url}}">{{$url}}</a></span>
-  </div>
-  <div class=" w-1/4 overflow-hidden">
-    <img src="{{$data.image.url}}" alt="mountains" class="min-h-full min-w-full box-content">
-  </div>
+<div class=" max-w-xl my-8 bg-white border border-gray-300  rounded-sm flex flex-col">
+  <div class="ml-4 text-sm text-gray-800 mt-2 tracking-normal"><a class="text-gray-800"
+      href="{{$url}}">{{$data.title}}</a></div>
+  <p class="ml-4 text-xs text-gray-700 mr-1">
+    {{$data.description | truncate 80}}
+  </p>
+  <span class=" underline ml-4 block pb-4 text-xs text-gray-500"><a class="text-gray-500"
+      href="{{$url}}">{{$url}}</a></span>
 </div>
 
 {{ end}}
