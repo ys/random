@@ -4,6 +4,7 @@ emoji: "👨🏼‍💻"
 slug: "about"
 menu:
   main:
+    name: 👨🏼‍💻
     weight: 20
 date: 2020-09-10T10:00:00+02:00
 ---

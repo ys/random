@@ -2,7 +2,8 @@
 layout: "list"
 title: "Archives"
 emoji: "🗄"
-menu: 
+menu:
   main:
+    name: 🗄
     weight: 10
 ---

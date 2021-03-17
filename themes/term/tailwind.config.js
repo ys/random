@@ -15,6 +15,9 @@ module.exports = {
       xl: "1200px"
     },
     extend: {
+      fontFamily: {
+        mono: ["ia-writer-duo", "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New"],
+      },
       colors: {
         dark: "#2d2f34",
         darker: "#1F2023"

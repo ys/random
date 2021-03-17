@@ -6,7 +6,7 @@ fullwidth: pink.jpg
 images: ["pink.jpg"]
 menu:
   main:
-   name: Home
+   name: 🏡
    weight: 1
 ---
 

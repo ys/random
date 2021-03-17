@@ -1,10 +1,12 @@
 {{ $currentPage := . }}
 <nav class="inline-block">
   <ul class="flex flex-wrap flex-row justify-left">
-    {{ range $index, $element  := .Site.Menus.main }}
-      <li class="pr-2 ">
-        <a class=" {{if or ($currentPage.IsMenuCurrent "main" $element) ($currentPage.HasMenuCurrent "main" $element) }} italic font-semibold active{{end}}" href="{{ $element.URL }}" title="{{ $element.Title }}">{{ $element.Name }}</a><span class="mx-3">•</span>
-      </li>
+    {{ range $index, $element := .Site.Menus.main }}
+    <li class="pr-2 ">
+      <a class=" {{if or ($currentPage.IsMenuCurrent " main" $element) ($currentPage.HasMenuCurrent "main" $element) }}
+        underline active{{end}}" href="{{ $element.URL }}" title="{{ $element.Title }}">{{ $element.Name }}</a><span
+        class="mx-3">•</span>
+    </li>
     {{ end }}
   </ul>
 </nav>

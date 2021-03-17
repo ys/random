@@ -5,9 +5,11 @@ theme = "term"
 enableRobotsTXT = true
 canonifyURLs = false
 disableKinds = ["taxonomy", "taxonomyTerm"]
+ignoreErrors = ["error-remote-getjson"]
 
 [params]
   footer = '🌲 Please consider the environment before printing this website'
+  apiURL = "https://random.yannickschutz.com/"
 
 [params.social]
   email = "hello@yannickschutz.com"
