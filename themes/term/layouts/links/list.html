@@ -1,0 +1,23 @@
+{{ define "main" }}
+<h1 class="font-semibold my-20">{{ with .Params.emoji }}{{ . }} {{ end }}{{ .Title }}</h1>
+<div class="wide-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  {{ $headless := .Site.GetPage "/links/images" }}
+  {{ range .RegularPages.ByDate.Reverse }}
+
+  <article class="mb-4">
+    <a href="{{ .Params.link }}"
+          class="text-darker dark:text-gray-100 ">
+
+    {{ $src := $headless.Resources.GetMatch (printf "*%s*" (.Params.uuid)) }}
+    {{ with $src }}
+      {{ $smol := .Fill "800x400 webp" }}
+      <img class="w-full rounded-lg shadow-lg" src="{{ $smol.RelPermalink }}"/>
+    {{ end }}
+    <header class="my-2 line-clamp-1">
+      <h2 class="text-center no-underline text-gray-700 text-xs">{{ .Title }}</h2>
+    </header>
+    </a>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

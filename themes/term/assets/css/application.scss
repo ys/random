@@ -48,6 +48,26 @@
   --font: "ia-writer-duo";
 }
 
+.wide-width {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  min-width: 100%;
+  width: 85vw;
+  transform: translateX(calc(-50% + 50vw));
+  position: relative;
+}
+
+.full-width {
+  margin-left: -50vw;
+  margin-right: -50vw;
+  left: 50% ;
+  right: 50% ;
+  width: 100vw;
+  position: relative;
+}
+
+
+
 .font-mono {
   font-family: var(--font), theme("fontFamily.mono") !important;
 }
