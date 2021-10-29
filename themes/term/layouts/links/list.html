@@ -1,6 +1,11 @@
 {{ define "main" }}
+<form id="search" class="search w-full py-2 border-b-2 border-blue-600" role="search">
+  <input type="search" id="search-input" placeholder="Search Links..." class="focus:outline-none text-3xl italic h-16 w-full bg-transparent search-input">
+</form>
 <h1 class="font-semibold my-20">{{ with .Params.emoji }}{{ . }} {{ end }}{{ .Title }}</h1>
-<div class="wide-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="links hidden wide-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+</div>
+<div class="all-links wide-width grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
   {{ $headless := .Site.GetPage "/links/images" }}
   {{ range .RegularPages.ByDate.Reverse }}
 
@@ -20,4 +25,146 @@
   </article>
   {{ end }}
 </div>
+<template id="search-result" hidden>
+  <article class="mb-4">
+    <a class="text-darker dark:text-gray-100 summary-title-link">
+      <img class="w-full rounded-lg shadow-lg post-image" />
+    <header class="my-2 line-clamp-1">
+      <h2 class="text-center no-underline text-gray-700 text-xs post-title"></h2>
+    </header>
+    </a>
+  </article>
+</template>
+    <script>
+      window.addEventListener("DOMContentLoaded", function(event)
+{
+  var index = null;
+  var lookup = null;
+  var queuedTerm = null;
+
+  var form = document.getElementById("search");
+  var input = document.getElementById("search-input");
+
+  var timeout = null;
+  input.addEventListener("keyup", function(event)
+  {
+    clearTimeout(timeout)
+    timeout = setTimeout(function() {
+      event.preventDefault();
+
+      var term = input.value.trim();
+      if (!term)
+      {
+        var searched = document.querySelector(".links");
+        var all = document.querySelector(".all-links");
+        searched.classList.add("hidden");
+        all.classList.remove("hidden");
+        return;
+      }
+
+      startSearch(term);
+    }, 400)
+  });
+
+
+  function startSearch(term)
+  {
+    // Start icon animation.
+    form.setAttribute("data-running", "true");
+
+    if (index)
+    {
+      // Index already present, search directly.
+      search(term);
+    }
+    else if (queuedTerm)
+    {
+      // Index is being loaded, replace the term we want to search for.
+      queuedTerm = term;
+    }
+    else
+    {
+      // Start loading index, perform the search when done.
+      queuedTerm = term;
+      initIndex();
+    }
+  }
+
+  function searchDone()
+  {
+    // Stop icon animation.
+    form.removeAttribute("data-running");
+
+    var searched = document.querySelector(".links");
+    var all = document.querySelector(".all-links");
+    searched.classList.remove("hidden");
+    all.classList.add("hidden");
+
+    queuedTerm = null;
+  }
+
+  function initIndex()
+  {
+    var request = new XMLHttpRequest();
+    request.open("GET", "/links/search.json");
+    request.responseType = "json";
+    request.addEventListener("load", function(event)
+    {
+      lookup = {};
+      index = lunr(function()
+      {
+        // Uncomment the following line and replace de by the right language
+        // code to use a lunr language pack.
+
+        // this.use(lunr.de);
+
+        this.ref("uuid");
+
+        // If you added more searchable fields to the search index, list them here.
+        this.field("title");
+        this.field("content");
+        this.field("description");
+        this.field("tags");
+
+        for (var doc of request.response)
+        {
+          this.add(doc);
+          lookup[doc.uuid] = doc;
+        }
+      });
+
+      // Search index is ready, perform the search now
+      search(queuedTerm);
+    }, false);
+    request.addEventListener("error", searchDone, false);
+    request.send(null);
+  }
+
+  function search(term)
+  {
+    var results = index.search(term);
+
+    // The element where search results should be displayed, adjust as needed.
+    var target = document.querySelector(".links");
+
+    while (target.firstChild)
+      target.removeChild(target.firstChild);
+
+    var template = document.getElementById("search-result");
+    for (var result of results)
+    {
+      var doc = lookup[result.ref];
+
+      // Fill out search result template, adjust as needed.
+      var element = template.content.cloneNode(true);
+      element.querySelector(".summary-title-link").href = doc.link;
+      element.querySelector(".post-title").textContent = doc.title;
+      element.querySelector(".post-image").src = doc.img;
+      target.appendChild(element);
+    }
+
+    searchDone();
+  }
+}, false);
+    </script>
 {{ end }}

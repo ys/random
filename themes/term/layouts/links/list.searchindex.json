@@ -1,0 +1,18 @@
+{{- $headless := .Site.GetPage "/links/images" -}}
+[
+  {{- range $index, $page := .RegularPages -}}
+    {{- if gt $index 0 -}} , {{- end -}}
+    {{- $entry := dict "uuid" $page.Params.uuid "title" $page.Title -}}
+    {{- $src := $headless.Resources.GetMatch (printf "*%s*" ($page.Params.uuid)) -}}
+    {{- with $src -}}
+      {{- $smol := .Fill "800x400 webp" -}}
+    {{- $entry = merge $entry (dict "img" $smol.RelPermalink) -}}
+    {{- end -}}
+    {{- $entry = merge $entry (dict "content" ($page.Plain | htmlUnescape)) -}}
+    {{- $entry = merge $entry (dict "description" $page.Description) -}}
+
+    {{- $entry = merge $entry (dict "tags" $page.Params.tags) -}}
+    {{- $entry = merge $entry (dict "link" $page.Params.link) -}}
+    {{- $entry | jsonify -}}
+  {{- end -}}
+]
