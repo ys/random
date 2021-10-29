@@ -8,6 +8,8 @@ module.exports = {
       ],
       whitelistPatternsChildren: [
        /mode-dark/,
+       /wide-width/,
+       /full-width/,
        /content/
       ]
     }),
